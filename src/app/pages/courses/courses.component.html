@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid m-0 p-0 primary-color text-light bord">
+    <div class="row p-5">
+        <div class="col-md-6">
+            <h1>Nos Cours</h1>
+            <small>Nous disposons de nombreux cours sur différents sujets comme l'informatique, les mathématiques, la science et bien d'autres. Pas besoin de s'inscrire ou d'autres engagements.</small>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row mt-3" align="center">
+        <div class="col-md-12 p-4" align="center">
+            <p style="width: 45%;">
+                Informatique, science, mathématique, chimie, physique... Trouvez votre bonheur dans notre liste de cours, écrit par des experts ci-dessous.
+            </p>
+        </div>
+    </div>
+    <div class="row p-5">
+        <div class="col-md-3 mb-2" *ngFor="let c of courses">
+          <div class="card" style="width: 18rem; height: 330px;">
+            <img src="{{ c.img }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" (click)="goToCourseDetail(c.id)">{{ c.title }}</h5>
+              <p class="card-text">{{ c.description }}</p>
+              <h6>              
+                <span class="badge badge-secondary">{{ c.category }}</span>
+              </h6>
+              
+            </div>
+          </div>
+        </div>        
+    </div>
+  </div>
+
+
+  <app-footer></app-footer>

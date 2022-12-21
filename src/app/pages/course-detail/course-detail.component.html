@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid ">
+
+    <div class="row">
+
+        <div class="col-md-9 ">
+            
+            <div class="container p-0 mb-4"  *ngIf="course.course.img" >
+                <img class="" src="{{ course.course.img }}" style="width: 100%; height: 500px;" alt="" srcset="">
+            </div>
+
+            <hr>
+            <div class="container" *ngIf="course.course.video !== ''">                
+                <iframe width="100%" height="500px"
+                [src]='sanitizer.bypassSecurityTrustResourceUrl(course.course.video)' frameborder="0"
+                webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="container">
+                <h1>{{ course.course.title }}</h1>
+                <p>
+                    {{ course.course.description }}
+                </p>
+
+                <h6 class="mt-4">
+                    Catégorie : &nbsp;
+                    <span class="badge badge-secondary">{{course.course.category}}</span>
+                </h6>
+            </div>
+
+
+            <div class="container p-3 mt-5" [innerHTML]="course.course.content">
+
+            </div>
+
+        </div>
+        <div class="col-md-3 p-4 ">
+
+            <div class="card p-2" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{course.user.name}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Enseignant {{ course.user.grade }}</h6>
+                  <br>
+                  <p class="card-text"><strong>Contact</strong> : {{ course.user.email }}</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<app-footer></app-footer>

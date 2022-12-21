@@ -1,0 +1,14 @@
+.card-text {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+.card-title {
+    cursor: pointer;
+}
+
+.bg {
+    background-color: #0758e2;
+}

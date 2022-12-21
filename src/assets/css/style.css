@@ -1,0 +1,38 @@
+.bord {
+    border: solid;
+}
+
+.primary-color {
+    background-color: rgb(21, 102, 177);
+}
+
+/* Nav nav */
+
+.sub-nav {
+    border-bottom: solid 1px gray;
+}
+
+@media screen and (min-width: 992px) {
+    .menu-list {
+        transform: translateX(120%);
+    }
+}
+
+
+
+/* Main Banner */
+.main-banner {
+    padding: 0;
+    height: 600px;
+    /* height: 600px;
+    background: url("../img/event-venue-1597531_1920.jpg");
+    background-size: cover; */
+}
+
+.text-banner > h1 {
+    font-size: 60px;
+}
+
+.group-elt-banner {
+    transform: translateY(60%);
+}

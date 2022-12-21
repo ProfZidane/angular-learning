@@ -1,0 +1,53 @@
+<!--Nav nav -->
+<div class="container-fluid sub-nav primary-color">
+    <div class="row p-3">
+        <div class="col-md-6">
+            <span class="ml-5 text-light "><strong>Ariana, Tunis Tunisie Centre ville</strong></span>
+            <span class="ml-5 text-light"><strong>+216 45 45 45 45</strong></span>
+        </div>
+        <div class="col-md-6">
+            <div style="float: right; position: relative; bottom: 2px;">
+                <img src="assets/img/icons8-facebook-30 (1).png" alt="" srcset="">
+                <img src="assets/img/icons8-instagram-30.png" alt="" srcset="">
+                <img src="assets/img/icons8-twitter-30.png" alt="" srcset="">
+                <img src="assets/img/icons8-linkedin-30.png" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+    <a class="navbar-brand" href="#">LEA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto menu-list">
+        <li class="nav-item active">
+          <a class="nav-link mr-5" href="/">Accueil <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr-5" href="/courses">Nos cours</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mr-5" href="/about">A propos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mr-5" href="/contact">Contacts</a>
+        </li>
+        
+       
+        <li class="nav-item">
+            <button class="btn btn-outline-primary ml-2 my-2 my-sm-0" type="submit" (click)="goToLogin()" *ngIf="!user">Connexion Prof</button>
+            <button class="btn btn-outline-warning ml-2 my-2 my-sm-0" type="submit" routerLink="/dashboard-teacher" *ngIf="user">{{user.name}}</button>
+
+        </li>
+
+      </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+  <!--// Nav nav-->

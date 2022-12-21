@@ -1,0 +1,48 @@
+
+<!-- As a link -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">Logo</a>
+</nav>
+
+<div class="container-fluid mt-2 bord">
+    <div class="row">
+        <div class="col-md-12 p-5">
+
+            <div class="container p-5 register-container">
+                <h3 class="mb-4">Inscription</h3>
+
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Nom & Prénoms</label>
+                      <input type="text" name="name" [(ngModel)]="data.name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Adresse Email</label>
+                      <input type="email" name="email" [(ngModel)]="data.email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Vous vous inscrivez en tant que </label>
+                        <select class="form-control" name="role" [(ngModel)]="data.role" id="exampleFormControlSelect1">
+                          <option value="teacher" selected>Enseignant</option>
+                          <option value="student">Etudiant</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Mot de passe</label>
+                      <input type="password" name="password" [(ngModel)]="data.password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                   <br>
+                    <button type="submit" (click)="onSubmit()" class="btn btn-primary">Enregistrer</button>
+                    <br><br>
+                    <small class="text-primary">
+                        <a href="/login">
+                            J'ai déjà un compte ! Je veux me connecter
+                        </a>
+                    </small> 
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>

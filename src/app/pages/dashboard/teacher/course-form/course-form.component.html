@@ -1,0 +1,75 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">Logo</a>
+</nav>
+
+<div class="container-fluid primary-color text-light p-2">
+    <div class="row">
+        <div class="col-md-9 p-5">
+            <h2>Création de cours</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aspernatur beatae voluptates modi repellat molestias, laboriosam incidunt officia numquam qui perferendis consequuntur quasi corporis ea saepe veniam natus explicabo dolores?
+            </p>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid p-5 ">
+    <div class="row" style="width:80%; transform:translateX(15%)">
+        <div class="col-md-12 mb-5">
+            <small><i>Veuillez remplir le formulaire ci-dessous</i></small>
+            <button class="btn btn-sm btn-outline-warning" style="float: right;" (click)="goBack()"><- Retour à la liste</button>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Titre</label>
+                <input type="text" class="form-control" name="title" [(ngModel)]="course.title" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Catégorie</label>
+                <select class="form-control" name="category" [(ngModel)]="course.category">
+                    <option value="Informatique" selected>Informatique</option>
+                    <option value="Chimie">Chimie</option>
+                    <option value="Physique">Physique</option>
+                    <option value="Mathématique">Mathématique</option>
+                </select>
+            </div> 
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="description" [(ngModel)]="course.description" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Contenu du cours</label>
+                <ckeditor [editor]="Editor" [data]=course.content name="introFr" [(ngModel)]="course.content"  (ready)="onReady($event)"></ckeditor>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Image profil</label>
+                <input type="text" class="form-control" name="img" [(ngModel)]="course.img" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Vidéo cours <small class="text-danger">(facultatif)</small></label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="video" [(ngModel)]="course.video" aria-describedby="emailHelp" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-12 mt-5">
+            <button class="btn btn-primary btn-block" (click)="onSubmit()">
+                Enregistrer
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>
